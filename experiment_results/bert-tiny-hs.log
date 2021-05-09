@@ -1,0 +1,277 @@
+05/09/2021 01:14:03 Launching the MT-DNN training
+05/09/2021 01:14:03 Loading data/canonical_data/bert-base-uncased/davidson_train.json as task 0
+05/09/2021 01:14:04 Loading data/canonical_data/bert-base-uncased/hateval_train.json as task 1
+05/09/2021 01:14:04 Loading data/canonical_data/bert-base-uncased/waseem_train.json as task 2
+05/09/2021 01:14:04 Loading data/canonical_data/bert-base-uncased/founta_train.json as task 3
+05/09/2021 01:14:06 ####################
+05/09/2021 01:14:06 {'log_file': 'mt-dnn-train.log', 'tensorboard': False, 'tensorboard_logdir': 'tensorboard_logdir', 'init_checkpoint': 'prajjwal1/bert-tiny', 'data_dir': 'data/canonical_data/bert-base-uncased', 'data_sort_on': False, 'name': 'farmer', 'task_def': 'experiments/glue/glue_task_def.yml', 'train_datasets': ['davidson', 'hateval', 'waseem', 'founta'], 'test_datasets': ['davidson', 'hateval', 'waseem', 'founta'], 'glue_format_on': False, 'mkd_opt': 0, 'do_padding': False, 'update_bert_opt': 0, 'multi_gpu_on': False, 'mem_cum_type': 'simple', 'answer_num_turn': 5, 'answer_mem_drop_p': 0.1, 'answer_att_hidden_size': 128, 'answer_att_type': 'bilinear', 'answer_rnn_type': 'gru', 'answer_sum_att_type': 'bilinear', 'answer_merge_opt': 1, 'answer_mem_type': 1, 'max_answer_len': 10, 'answer_dropout_p': 0.1, 'answer_weight_norm_on': False, 'dump_state_on': False, 'answer_opt': 1, 'pooler_actf': 'tanh', 'mtl_opt': 0, 'ratio': 0, 'mix_opt': 0, 'max_seq_len': 512, 'init_ratio': 1, 'encoder_type': <EncoderModelType.BERT: 1>, 'num_hidden_layers': -1, 'bert_model_type': 'bert-base-uncased', 'do_lower_case': False, 'masked_lm_prob': 0.15, 'short_seq_prob': 0.2, 'max_predictions_per_seq': 128, 'bin_on': False, 'bin_size': 64, 'bin_grow_ratio': 0.5, 'local_rank': -1, 'world_size': 1, 'master_addr': 'localhost', 'master_port': '6600', 'backend': 'nccl', 'cuda': True, 'log_per_updates': 500, 'save_per_updates': 10000, 'save_per_updates_on': False, 'epochs': 5, 'batch_size': 8, 'batch_size_eval': 8, 'optimizer': 'adamax', 'grad_clipping': 0, 'global_grad_clipping': 1.0, 'weight_decay': 0, 'learning_rate': 5e-05, 'momentum': 0, 'warmup': 0.1, 'warmup_schedule': 'warmup_linear', 'adam_eps': 1e-06, 'vb_dropout': True, 'dropout_p': 0.1, 'dropout_w': 0.0, 'bert_dropout_p': 0.1, 'model_ckpt': 'checkpoints/model_0.pt', 'resume': False, 'have_lr_scheduler': True, 'multi_step_lr': '10,20,30', 'lr_gamma': 0.5, 'scheduler_type': 'ms', 'output_dir': 'checkpoint', 'seed': 2018, 'grad_accumulation_step': 1, 'fp16': False, 'fp16_opt_level': 'O1', 'adv_train': False, 'adv_opt': 0, 'adv_norm_level': 0, 'adv_p_norm': 'inf', 'adv_alpha': 1, 'adv_k': 1, 'adv_step_size': 1e-05, 'adv_noise_var': 1e-05, 'adv_epsilon': 1e-06, 'encode_mode': False, 'debug': False, 'task_def_list': [{'self': '{}', 'label_vocab': 'None', 'n_class': '3', 'data_type': '<DataFormat.PremiseOnly: 1>', 'task_type': '<TaskType.Classification: 1>', 'metric_meta': '(<Metric.ACC: 0>, <Metric.MCC: 2>)', 'split_names': "['train', 'dev', 'test']", 'enable_san': 'False', 'dropout_p': '0.05', 'loss': '<LossCriterion.CeCriterion: 0>', 'kd_loss': '<LossCriterion.MseCriterion: 1>', 'adv_loss': '<LossCriterion.SymKlCriterion: 7>', '__class__': "<class 'experiments.exp_def.TaskDef'>"}, {'self': '{}', 'label_vocab': 'None', 'n_class': '2', 'data_type': '<DataFormat.PremiseOnly: 1>', 'task_type': '<TaskType.Classification: 1>', 'metric_meta': '(<Metric.ACC: 0>, <Metric.MCC: 2>)', 'split_names': "['train', 'dev', 'test']", 'enable_san': 'False', 'dropout_p': '0.05', 'loss': '<LossCriterion.CeCriterion: 0>', 'kd_loss': '<LossCriterion.MseCriterion: 1>', 'adv_loss': '<LossCriterion.SymKlCriterion: 7>', '__class__': "<class 'experiments.exp_def.TaskDef'>"}, {'self': '{}', 'label_vocab': 'None', 'n_class': '3', 'data_type': '<DataFormat.PremiseOnly: 1>', 'task_type': '<TaskType.Classification: 1>', 'metric_meta': '(<Metric.ACC: 0>, <Metric.MCC: 2>)', 'split_names': "['train', 'dev', 'test']", 'enable_san': 'False', 'dropout_p': '0.05', 'loss': '<LossCriterion.CeCriterion: 0>', 'kd_loss': '<LossCriterion.MseCriterion: 1>', 'adv_loss': '<LossCriterion.SymKlCriterion: 7>', '__class__': "<class 'experiments.exp_def.TaskDef'>"}, {'self': '{}', 'label_vocab': 'None', 'n_class': '4', 'data_type': '<DataFormat.PremiseOnly: 1>', 'task_type': '<TaskType.Classification: 1>', 'metric_meta': '(<Metric.ACC: 0>, <Metric.MCC: 2>)', 'split_names': "['train', 'dev', 'test']", 'enable_san': 'False', 'dropout_p': '0.05', 'loss': '<LossCriterion.CeCriterion: 0>', 'kd_loss': '<LossCriterion.MseCriterion: 1>', 'adv_loss': '<LossCriterion.SymKlCriterion: 7>', '__class__': "<class 'experiments.exp_def.TaskDef'>"}]}
+05/09/2021 01:14:06 ####################
+05/09/2021 01:14:06 ############# Gradient Accumulation Info #############
+05/09/2021 01:14:06 number of step: 59045
+05/09/2021 01:14:06 number of grad grad_accumulation step: 1
+05/09/2021 01:14:06 adjusted number of step: 59045
+05/09/2021 01:14:06 ############# Gradient Accumulation Info #############
+05/09/2021 01:14:11 
+############# Model Arch of MT-DNN #############
+SANBertNetwork(
+  (dropout_list): ModuleList(
+    (0): DropoutWrapper()
+    (1): DropoutWrapper()
+    (2): DropoutWrapper()
+    (3): DropoutWrapper()
+  )
+  (bert): BertModel(
+    (embeddings): BertEmbeddings(
+      (word_embeddings): Embedding(30522, 128, padding_idx=0)
+      (position_embeddings): Embedding(512, 128)
+      (token_type_embeddings): Embedding(2, 128)
+      (LayerNorm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+      (dropout): Dropout(p=0.1, inplace=False)
+    )
+    (encoder): BertEncoder(
+      (layer): ModuleList(
+        (0): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=128, out_features=128, bias=True)
+              (key): Linear(in_features=128, out_features=128, bias=True)
+              (value): Linear(in_features=128, out_features=128, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=128, out_features=128, bias=True)
+              (LayerNorm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=128, out_features=512, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=512, out_features=128, bias=True)
+            (LayerNorm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+        (1): BertLayer(
+          (attention): BertAttention(
+            (self): BertSelfAttention(
+              (query): Linear(in_features=128, out_features=128, bias=True)
+              (key): Linear(in_features=128, out_features=128, bias=True)
+              (value): Linear(in_features=128, out_features=128, bias=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+            (output): BertSelfOutput(
+              (dense): Linear(in_features=128, out_features=128, bias=True)
+              (LayerNorm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+          (intermediate): BertIntermediate(
+            (dense): Linear(in_features=128, out_features=512, bias=True)
+          )
+          (output): BertOutput(
+            (dense): Linear(in_features=512, out_features=128, bias=True)
+            (LayerNorm): LayerNorm((128,), eps=1e-12, elementwise_affine=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+          )
+        )
+      )
+    )
+    (pooler): BertPooler(
+      (dense): Linear(in_features=128, out_features=128, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (scoring_list): ModuleList(
+    (0): Linear(in_features=128, out_features=3, bias=True)
+    (1): Linear(in_features=128, out_features=2, bias=True)
+    (2): Linear(in_features=128, out_features=3, bias=True)
+    (3): Linear(in_features=128, out_features=4, bias=True)
+  )
+  (pooler): Pooler(
+    (dense): Linear(in_features=128, out_features=128, bias=True)
+    (dropout): DropoutWrapper()
+  )
+)
+
+05/09/2021 01:14:11 Total number of params: 4403980
+05/09/2021 01:14:11 At epoch 0
+05/09/2021 01:14:11 Task [ 2] updates[     1] train loss[1.02322] remaining[0:45:46]
+05/09/2021 01:14:22 Task [ 3] updates[   500] train loss[1.29825] remaining[0:04:09]
+05/09/2021 01:14:33 Task [ 3] updates[  1000] train loss[1.19366] remaining[0:03:56]
+05/09/2021 01:14:43 Task [ 3] updates[  1500] train loss[1.09988] remaining[0:03:44]
+05/09/2021 01:14:54 Task [ 0] updates[  2000] train loss[1.02840] remaining[0:03:33]
+05/09/2021 01:15:05 Task [ 0] updates[  2500] train loss[0.96716] remaining[0:03:22]
+05/09/2021 01:15:16 Task [ 3] updates[  3000] train loss[0.90898] remaining[0:03:11]
+05/09/2021 01:15:27 Task [ 3] updates[  3500] train loss[0.85921] remaining[0:03:01]
+05/09/2021 01:15:38 Task [ 3] updates[  4000] train loss[0.81633] remaining[0:02:50]
+05/09/2021 01:15:49 Task [ 2] updates[  4500] train loss[0.77731] remaining[0:02:39]
+05/09/2021 01:16:00 Task [ 3] updates[  5000] train loss[0.74827] remaining[0:02:28]
+05/09/2021 01:16:11 Task [ 3] updates[  5500] train loss[0.72136] remaining[0:02:17]
+05/09/2021 01:16:22 Task [ 3] updates[  6000] train loss[0.70053] remaining[0:02:06]
+05/09/2021 01:16:32 Task [ 3] updates[  6500] train loss[0.68174] remaining[0:01:55]
+05/09/2021 01:16:43 Task [ 0] updates[  7000] train loss[0.66464] remaining[0:01:44]
+05/09/2021 01:16:54 Task [ 2] updates[  7500] train loss[0.65131] remaining[0:01:33]
+05/09/2021 01:17:05 Task [ 0] updates[  8000] train loss[0.63866] remaining[0:01:22]
+05/09/2021 01:17:16 Task [ 3] updates[  8500] train loss[0.62509] remaining[0:01:12]
+05/09/2021 01:17:27 Task [ 3] updates[  9000] train loss[0.61386] remaining[0:01:01]
+05/09/2021 01:17:38 Task [ 0] updates[  9500] train loss[0.60572] remaining[0:00:50]
+05/09/2021 01:17:48 Task [ 3] updates[ 10000] train loss[0.59612] remaining[0:00:39]
+05/09/2021 01:17:59 Task [ 0] updates[ 10500] train loss[0.58803] remaining[0:00:28]
+05/09/2021 01:18:10 Task [ 2] updates[ 11000] train loss[0.57976] remaining[0:00:17]
+05/09/2021 01:18:21 Task [ 3] updates[ 11500] train loss[0.57485] remaining[0:00:06]
+05/09/2021 01:18:27 Evaluation
+05/09/2021 01:18:28 Task davidson -- epoch 0 -- Dev ACC: 90.217
+05/09/2021 01:18:28 Task davidson -- epoch 0 -- Dev MCC: 70.137
+05/09/2021 01:18:29 Task hateval -- epoch 0 -- Dev ACC: 63.800
+05/09/2021 01:18:29 Task hateval -- epoch 0 -- Dev MCC: 25.216
+05/09/2021 01:18:29 Task waseem -- epoch 0 -- Dev ACC: 98.690
+05/09/2021 01:18:29 Task waseem -- epoch 0 -- Dev MCC: 0.000
+05/09/2021 01:18:32 Task founta -- epoch 0 -- Dev ACC: 90.887
+05/09/2021 01:18:32 Task founta -- epoch 0 -- Dev MCC: 82.042
+05/09/2021 01:18:32 Evaluation
+05/09/2021 01:18:42 [new test scores at 0 saved.]
+05/09/2021 01:18:43 At epoch 1
+05/09/2021 01:18:47 Task [ 2] updates[ 12000] train loss[0.56654] remaining[0:04:12]
+05/09/2021 01:18:57 Task [ 1] updates[ 12500] train loss[0.56077] remaining[0:03:59]
+05/09/2021 01:19:08 Task [ 3] updates[ 13000] train loss[0.55460] remaining[0:03:48]
+05/09/2021 01:19:19 Task [ 3] updates[ 13500] train loss[0.54849] remaining[0:03:37]
+05/09/2021 01:19:30 Task [ 3] updates[ 14000] train loss[0.54409] remaining[0:03:26]
+05/09/2021 01:19:40 Task [ 3] updates[ 14500] train loss[0.53999] remaining[0:03:15]
+05/09/2021 01:19:51 Task [ 3] updates[ 15000] train loss[0.53664] remaining[0:03:04]
+05/09/2021 01:20:02 Task [ 3] updates[ 15500] train loss[0.53218] remaining[0:02:53]
+05/09/2021 01:20:12 Task [ 0] updates[ 16000] train loss[0.52786] remaining[0:02:43]
+05/09/2021 01:20:23 Task [ 3] updates[ 16500] train loss[0.52357] remaining[0:02:32]
+05/09/2021 01:20:34 Task [ 3] updates[ 17000] train loss[0.52082] remaining[0:02:21]
+05/09/2021 01:20:44 Task [ 3] updates[ 17500] train loss[0.51841] remaining[0:02:10]
+05/09/2021 01:20:55 Task [ 3] updates[ 18000] train loss[0.51644] remaining[0:02:00]
+05/09/2021 01:21:06 Task [ 2] updates[ 18500] train loss[0.51392] remaining[0:01:49]
+05/09/2021 01:21:17 Task [ 0] updates[ 19000] train loss[0.51080] remaining[0:01:38]
+05/09/2021 01:21:27 Task [ 0] updates[ 19500] train loss[0.50913] remaining[0:01:28]
+05/09/2021 01:21:38 Task [ 3] updates[ 20000] train loss[0.50606] remaining[0:01:17]
+05/09/2021 01:21:49 Task [ 3] updates[ 20500] train loss[0.50313] remaining[0:01:06]
+05/09/2021 01:21:59 Task [ 1] updates[ 21000] train loss[0.50147] remaining[0:00:56]
+05/09/2021 01:22:10 Task [ 1] updates[ 21500] train loss[0.49954] remaining[0:00:45]
+05/09/2021 01:22:21 Task [ 3] updates[ 22000] train loss[0.49710] remaining[0:00:34]
+05/09/2021 01:22:31 Task [ 3] updates[ 22500] train loss[0.49455] remaining[0:00:23]
+05/09/2021 01:22:42 Task [ 2] updates[ 23000] train loss[0.49247] remaining[0:00:13]
+05/09/2021 01:22:53 Task [ 3] updates[ 23500] train loss[0.49044] remaining[0:00:02]
+05/09/2021 01:22:55 Evaluation
+05/09/2021 01:22:56 Task davidson -- epoch 1 -- Dev ACC: 91.931
+05/09/2021 01:22:56 Task davidson -- epoch 1 -- Dev MCC: 75.862
+05/09/2021 01:22:56 Task hateval -- epoch 1 -- Dev ACC: 65.600
+05/09/2021 01:22:56 Task hateval -- epoch 1 -- Dev MCC: 29.744
+05/09/2021 01:22:57 Task waseem -- epoch 1 -- Dev ACC: 98.452
+05/09/2021 01:22:57 Task waseem -- epoch 1 -- Dev MCC: 0.000
+05/09/2021 01:22:59 Task founta -- epoch 1 -- Dev ACC: 90.977
+05/09/2021 01:22:59 Task founta -- epoch 1 -- Dev MCC: 82.234
+05/09/2021 01:22:59 Evaluation
+05/09/2021 01:23:10 [new test scores at 1 saved.]
+05/09/2021 01:23:10 At epoch 2
+05/09/2021 01:23:18 Task [ 0] updates[ 24000] train loss[0.48777] remaining[0:04:05]
+05/09/2021 01:23:29 Task [ 3] updates[ 24500] train loss[0.48575] remaining[0:03:54]
+05/09/2021 01:23:40 Task [ 0] updates[ 25000] train loss[0.48380] remaining[0:03:43]
+05/09/2021 01:23:50 Task [ 3] updates[ 25500] train loss[0.48111] remaining[0:03:32]
+05/09/2021 01:24:01 Task [ 3] updates[ 26000] train loss[0.48017] remaining[0:03:22]
+05/09/2021 01:24:12 Task [ 2] updates[ 26500] train loss[0.47893] remaining[0:03:11]
+05/09/2021 01:24:23 Task [ 3] updates[ 27000] train loss[0.47709] remaining[0:03:00]
+05/09/2021 01:24:33 Task [ 1] updates[ 27500] train loss[0.47547] remaining[0:02:49]
+05/09/2021 01:24:44 Task [ 0] updates[ 28000] train loss[0.47383] remaining[0:02:39]
+05/09/2021 01:24:55 Task [ 2] updates[ 28500] train loss[0.47228] remaining[0:02:28]
+05/09/2021 01:25:05 Task [ 3] updates[ 29000] train loss[0.47082] remaining[0:02:17]
+05/09/2021 01:25:16 Task [ 3] updates[ 29500] train loss[0.46993] remaining[0:02:06]
+05/09/2021 01:25:27 Task [ 3] updates[ 30000] train loss[0.46932] remaining[0:01:56]
+05/09/2021 01:25:38 Task [ 3] updates[ 30500] train loss[0.46813] remaining[0:01:45]
+05/09/2021 01:25:48 Task [ 0] updates[ 31000] train loss[0.46712] remaining[0:01:34]
+05/09/2021 01:25:59 Task [ 3] updates[ 31500] train loss[0.46638] remaining[0:01:24]
+05/09/2021 01:26:10 Task [ 3] updates[ 32000] train loss[0.46516] remaining[0:01:13]
+05/09/2021 01:26:20 Task [ 3] updates[ 32500] train loss[0.46341] remaining[0:01:02]
+05/09/2021 01:26:31 Task [ 3] updates[ 33000] train loss[0.46291] remaining[0:00:52]
+05/09/2021 01:26:42 Task [ 3] updates[ 33500] train loss[0.46182] remaining[0:00:41]
+05/09/2021 01:26:53 Task [ 3] updates[ 34000] train loss[0.46091] remaining[0:00:30]
+05/09/2021 01:27:03 Task [ 1] updates[ 34500] train loss[0.45942] remaining[0:00:19]
+05/09/2021 01:27:14 Task [ 0] updates[ 35000] train loss[0.45893] remaining[0:00:09]
+05/09/2021 01:27:23 Evaluation
+05/09/2021 01:27:24 Task davidson -- epoch 2 -- Dev ACC: 92.637
+05/09/2021 01:27:24 Task davidson -- epoch 2 -- Dev MCC: 78.303
+05/09/2021 01:27:24 Task hateval -- epoch 2 -- Dev ACC: 68.200
+05/09/2021 01:27:24 Task hateval -- epoch 2 -- Dev MCC: 34.938
+05/09/2021 01:27:25 Task waseem -- epoch 2 -- Dev ACC: 98.214
+05/09/2021 01:27:25 Task waseem -- epoch 2 -- Dev MCC: 0.000
+05/09/2021 01:27:27 Task founta -- epoch 2 -- Dev ACC: 90.992
+05/09/2021 01:27:27 Task founta -- epoch 2 -- Dev MCC: 82.256
+05/09/2021 01:27:27 Evaluation
+05/09/2021 01:27:38 [new test scores at 2 saved.]
+05/09/2021 01:27:38 At epoch 3
+05/09/2021 01:27:40 Task [ 3] updates[ 35500] train loss[0.45707] remaining[0:04:10]
+05/09/2021 01:27:50 Task [ 3] updates[ 36000] train loss[0.45625] remaining[0:03:58]
+05/09/2021 01:28:01 Task [ 3] updates[ 36500] train loss[0.45490] remaining[0:03:48]
+05/09/2021 01:28:11 Task [ 3] updates[ 37000] train loss[0.45381] remaining[0:03:37]
+05/09/2021 01:28:22 Task [ 1] updates[ 37500] train loss[0.45270] remaining[0:03:26]
+05/09/2021 01:28:33 Task [ 1] updates[ 38000] train loss[0.45200] remaining[0:03:15]
+05/09/2021 01:28:43 Task [ 3] updates[ 38500] train loss[0.45149] remaining[0:03:05]
+05/09/2021 01:28:54 Task [ 0] updates[ 39000] train loss[0.45041] remaining[0:02:54]
+05/09/2021 01:29:05 Task [ 0] updates[ 39500] train loss[0.44915] remaining[0:02:44]
+05/09/2021 01:29:15 Task [ 3] updates[ 40000] train loss[0.44812] remaining[0:02:33]
+05/09/2021 01:29:26 Task [ 2] updates[ 40500] train loss[0.44757] remaining[0:02:22]
+05/09/2021 01:29:36 Task [ 3] updates[ 41000] train loss[0.44683] remaining[0:02:12]
+05/09/2021 01:29:47 Task [ 0] updates[ 41500] train loss[0.44664] remaining[0:02:01]
+05/09/2021 01:29:58 Task [ 3] updates[ 42000] train loss[0.44593] remaining[0:01:51]
+05/09/2021 01:30:08 Task [ 1] updates[ 42500] train loss[0.44518] remaining[0:01:40]
+05/09/2021 01:30:19 Task [ 3] updates[ 43000] train loss[0.44475] remaining[0:01:29]
+05/09/2021 01:30:29 Task [ 3] updates[ 43500] train loss[0.44429] remaining[0:01:19]
+05/09/2021 01:30:40 Task [ 0] updates[ 44000] train loss[0.44329] remaining[0:01:08]
+05/09/2021 01:30:51 Task [ 3] updates[ 44500] train loss[0.44269] remaining[0:00:58]
+05/09/2021 01:31:01 Task [ 0] updates[ 45000] train loss[0.44248] remaining[0:00:47]
+05/09/2021 01:31:12 Task [ 2] updates[ 45500] train loss[0.44206] remaining[0:00:36]
+05/09/2021 01:31:23 Task [ 3] updates[ 46000] train loss[0.44146] remaining[0:00:26]
+05/09/2021 01:31:33 Task [ 3] updates[ 46500] train loss[0.44034] remaining[0:00:15]
+05/09/2021 01:31:44 Task [ 1] updates[ 47000] train loss[0.44014] remaining[0:00:05]
+05/09/2021 01:31:49 Evaluation
+05/09/2021 01:31:50 Task davidson -- epoch 3 -- Dev ACC: 92.940
+05/09/2021 01:31:50 Task davidson -- epoch 3 -- Dev MCC: 78.950
+05/09/2021 01:31:50 Task hateval -- epoch 3 -- Dev ACC: 68.400
+05/09/2021 01:31:50 Task hateval -- epoch 3 -- Dev MCC: 35.310
+05/09/2021 01:31:50 Task waseem -- epoch 3 -- Dev ACC: 97.857
+05/09/2021 01:31:50 Task waseem -- epoch 3 -- Dev MCC: 0.000
+05/09/2021 01:31:53 Task founta -- epoch 3 -- Dev ACC: 91.292
+05/09/2021 01:31:53 Task founta -- epoch 3 -- Dev MCC: 82.870
+05/09/2021 01:31:53 Evaluation
+05/09/2021 01:32:04 [new test scores at 3 saved.]
+05/09/2021 01:32:04 At epoch 4
+05/09/2021 01:32:09 Task [ 0] updates[ 47500] train loss[0.43910] remaining[0:04:05]
+05/09/2021 01:32:20 Task [ 3] updates[ 48000] train loss[0.43866] remaining[0:03:55]
+05/09/2021 01:32:31 Task [ 0] updates[ 48500] train loss[0.43784] remaining[0:03:44]
+05/09/2021 01:32:41 Task [ 3] updates[ 49000] train loss[0.43688] remaining[0:03:33]
+05/09/2021 01:32:52 Task [ 3] updates[ 49500] train loss[0.43642] remaining[0:03:23]
+05/09/2021 01:33:03 Task [ 0] updates[ 50000] train loss[0.43610] remaining[0:03:12]
+05/09/2021 01:33:13 Task [ 3] updates[ 50500] train loss[0.43572] remaining[0:03:01]
+05/09/2021 01:33:24 Task [ 3] updates[ 51000] train loss[0.43492] remaining[0:02:51]
+05/09/2021 01:33:34 Task [ 3] updates[ 51500] train loss[0.43430] remaining[0:02:40]
+05/09/2021 01:33:45 Task [ 3] updates[ 52000] train loss[0.43353] remaining[0:02:29]
+05/09/2021 01:33:56 Task [ 3] updates[ 52500] train loss[0.43302] remaining[0:02:19]
+05/09/2021 01:34:06 Task [ 2] updates[ 53000] train loss[0.43265] remaining[0:02:08]
+05/09/2021 01:34:17 Task [ 1] updates[ 53500] train loss[0.43249] remaining[0:01:57]
+05/09/2021 01:34:28 Task [ 3] updates[ 54000] train loss[0.43193] remaining[0:01:47]
+05/09/2021 01:34:38 Task [ 1] updates[ 54500] train loss[0.43182] remaining[0:01:36]
+05/09/2021 01:34:49 Task [ 3] updates[ 55000] train loss[0.43138] remaining[0:01:26]
+05/09/2021 01:35:00 Task [ 0] updates[ 55500] train loss[0.43114] remaining[0:01:15]
+05/09/2021 01:35:11 Task [ 3] updates[ 56000] train loss[0.43027] remaining[0:01:04]
+05/09/2021 01:35:21 Task [ 3] updates[ 56500] train loss[0.43025] remaining[0:00:54]
+05/09/2021 01:35:32 Task [ 3] updates[ 57000] train loss[0.42987] remaining[0:00:43]
+05/09/2021 01:35:43 Task [ 3] updates[ 57500] train loss[0.42971] remaining[0:00:32]
+05/09/2021 01:35:53 Task [ 0] updates[ 58000] train loss[0.42927] remaining[0:00:22]
+05/09/2021 01:36:04 Task [ 3] updates[ 58500] train loss[0.42877] remaining[0:00:11]
+05/09/2021 01:36:15 Task [ 3] updates[ 59000] train loss[0.42833] remaining[0:00:00]
+05/09/2021 01:36:15 Evaluation
+05/09/2021 01:36:16 Task davidson -- epoch 4 -- Dev ACC: 92.839
+05/09/2021 01:36:16 Task davidson -- epoch 4 -- Dev MCC: 78.598
+05/09/2021 01:36:17 Task hateval -- epoch 4 -- Dev ACC: 68.600
+05/09/2021 01:36:17 Task hateval -- epoch 4 -- Dev MCC: 36.287
+05/09/2021 01:36:17 Task waseem -- epoch 4 -- Dev ACC: 97.619
+05/09/2021 01:36:17 Task waseem -- epoch 4 -- Dev MCC: 0.000
+05/09/2021 01:36:20 Task founta -- epoch 4 -- Dev ACC: 91.142
+05/09/2021 01:36:20 Task founta -- epoch 4 -- Dev MCC: 82.605
+05/09/2021 01:36:20 Evaluation
+05/09/2021 01:36:30 [new test scores at 4 saved.]
